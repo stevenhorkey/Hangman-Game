@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+    background: url('https://wallpaper.wiki/wp-content/uploads/2017/05/Tie-Dye-Backgrounds-Desktop.jpg') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Lato', sans-serif;    
+    min-height: 100%;
+    min-width: 320px;
+    color: white;
+
+}
+
+.header {
+    height: 30vh;
+}
+
+h1 {
+}
+
+
+/* Image Column */
+.hangman-img {
+    width: 250px;
+    height: 250px;
+}
