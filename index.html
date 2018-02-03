@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>60's Hangman</title>
+     <!--Fonts-->
+     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />   
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" /> 
+   
 </head>
 <body>
     <div class="row header">
@@ -20,21 +23,30 @@
     </div>
     <div class="row">
         <div class="container">
-            <div class="col-xs-6">
+            <div class="col-sm-6 col-xs-12 content">
                 <img class="hangman-img" src="https://i.pinimg.com/736x/c8/ee/48/c8ee48b75430f2bdf74fcdabd837881d--models-remember-this.jpg" alt="hangman picture"/>
             </div>
-            <div class="col-xs-6">
+            <div class="col-sm-6 col-xs-12 content game-section">
                 <p>Press any key to get started!</p>
-                <p>Wins</p>
-                <p>Current Word</p>
-                <h3></h3>
-                <p>Letters already guessed</p>
+                <br>
+                <p>Wins: </p>
+                    <div id="user-wins">t</div>
+                <br>                    
+                <p>Current Word: </p>
+                    <div id="current-word">t</div>
+                <br>                    
+                <p>Letters already guessed: </p>
+                    <div id="user-guess"></div>
+                <br>                    
+                <p>Guesses Remaining: </p>
+                    <div id="guess-remain">t</div>
+                <br>                    
             </div>
         </div>
     </div>
 
 
 <!-- Javascript -->
-<script type="javascript" src="assets/javascript/game.js"></script>
+<script src="assets/javascript/game.js"></script>
 </body>
 </html>
