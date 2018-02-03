@@ -26,7 +26,7 @@ h1 {
 .content {
     border: dotted hotpink 3px;
     padding: 30px;
-    min-height: 400px;
+    height: 600px;
 }
 
 /* Image Section */
@@ -47,4 +47,8 @@ h1 {
 #user-guess,
 #guess-remain {
     color: aquamarine;
+}
+
+#current-word {
+    letter-spacing: 5px;
 }

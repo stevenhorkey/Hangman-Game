@@ -26,45 +26,51 @@ var words = ['hendrix', 'santana', 'beatles'];
 var word = words[Math.floor(Math.random() * words.length)];
 console.log(word)
 
-var letters = ['']
+var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',]
 
 // Sets initial score to 0
 var wins = 0;
 userWins.textContent = wins
-// Sets remaining guesses to the length of the respective array
-// var guessRemain = words[].length;
+
+currentWord.textContent = word;
+
 
     var guessedLetters = [];
     var currentBand = [];
     
 
-if(
 document.onkeyup = function(event) {
-
-    // Determins which key was pressed
     var userInput = event.key;
+    userInput = userInput.toLowerCase();    
+        
+    if (letters.includes(userInput)){
+
+        // Alerts in the console which key was pressed
+        console.log(userInput + " was pressed!")
+
+        var guessCount = word.length + 1;
+
+        if(!guessedLetters.includes(userInput)) {
+            guessedLetters.push(userInput);
+            userGuess.textContent = guessedLetters;
+        }
+        
+        for(i = 0; i < word.length; i ++) {
+            if (userInput === word[i] && !currentBand.includes(word[i])) {
+                currentBand.push(word[i]);
+                console.log(currentBand);
+            } else if(userInput !== word[i]) {
+                // guessCount = guessCount - 1;
+                guessRemain.textContent = guessCount - 1;
+            } else {
+                console.log('already includes');
+            
+        }
+        }
+    }
+}
     
 
-
-    // Alerts in the console which key was pressed
-    console.log(userInput + " was pressed!")
-
-    var guessCount = word.length + 1;
-
-    guessedLetters.push(userInput);
-    userGuess.textContent = guessedLetters;
-
-
-    for(i = 0; i < word.length; i ++) {
-        if (userInput === word[i]) {
-            
-            currentBand.push(word[i]);
-            console.log(currentBand);
-            
-        } else if(userInput !== word[i]) {
-            guessRemain.textContent = guessCount - 1;
-        }
-    }}
 
 
     
