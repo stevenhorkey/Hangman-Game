@@ -15,9 +15,13 @@ body {
 
 }
 
+
 .header {
-    height: 150px;
-    border-bottom: rgba(224, 153, 0, 0.774) solid 4px;
+    background-color: 
+    height: 160px;
+    border-bottom: rgba(224, 153, 0, 0.774) inset 10px;
+    margin-bottom: 30px;
+
     
 }
 
@@ -26,7 +30,7 @@ h1 {
 }
 
 .content {
-    border: inset #dff0d8 3px;
+    border: inset #dff0d8 10px;
     border-radius: 30px;
     padding: 30px;
     height: 600px;
@@ -39,10 +43,12 @@ h1 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-position: center;
 }
 .hangman-img {
-    width: 80%;
-    height: auto;
+    width: 100vw;
+    height: 150px;
+    max-width: 1150px;
 }
 
 /* Game Section */
