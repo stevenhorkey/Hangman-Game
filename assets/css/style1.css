@@ -1,0 +1,74 @@
+body {
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.404), rgba(138, 84, 14, 0.432)), url('https://media.giphy.com/media/ZXJ9Epkiv3NBK/giphy.gif') repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 320px;
+    color: white;
+    font-family: 'Indie Flower', sans-serif;
+    color: hotpink;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+.content-on-top {
+    margin-bottom: 30px;
+}
+
+
+.header {
+    background-color: #4A0548;
+    height: 160px;
+    border-bottom: rgba(224, 153, 0, 0.774) inset 10px;
+    margin-bottom: 30px;
+
+    
+}
+
+h1 {
+    font-size: 10em;
+}
+
+.content {
+    border: inset #dff0d8 10px;
+    border-radius: 30px;
+    padding: 30px;
+    height: 650px;
+}
+
+/* Image Section */
+.img-section {
+    background: url('https://media.giphy.com/media/5F1IYPP4KUMKY/giphy.gif') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.hangman-img {
+    width: 100vw;
+    height: 150px;
+    max-width: 1150px;
+}
+
+/* Game Section */
+
+.game-section {
+    font-size: 25px;
+    background-color: rgba(0, 0, 255, 0.205)
+}
+
+#user-wins,
+#current-word,
+#user-guess,
+#guess-remain {
+    color: aquamarine;
+}
+
+#current-word {
+    letter-spacing: 5px;
+}
