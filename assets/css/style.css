@@ -12,7 +12,6 @@ body {
     color: hotpink;
     text-transform: uppercase;
     font-weight: bold;
-
 }
 
 .content-on-top {
@@ -25,8 +24,6 @@ body {
     height: 160px;
     border-bottom: rgba(224, 153, 0, 0.774) inset 10px;
     margin-bottom: 30px;
-
-    
 }
 
 h1 {
@@ -42,13 +39,13 @@ h1 {
 
 /* Image Section */
 .img-section {
-    background: url('https://media.giphy.com/media/5F1IYPP4KUMKY/giphy.gif') no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    background-position: center !important;
 }
+
 .hangman-img {
     width: 100vw;
     height: 150px;
@@ -59,7 +56,8 @@ h1 {
 
 .game-section {
     font-size: 25px;
-    background-color: rgba(0, 0, 255, 0.205)
+    background-color: rgba(0, 0, 255, 0.205);
+    font-family: 'Indie Flower', sans-serif;
 }
 
 #user-wins,

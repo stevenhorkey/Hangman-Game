@@ -9,6 +9,7 @@ var userGuess = document.getElementById("user-guess");
 // Sets userWins to html #guess-remain
 var guessRemain = document.getElementById("guess-remain");
 
+// Sets html elements with underscores to corresponding letter variables to manipulate in js
 var letter1 = document.getElementById("letter-one");
 var letter2 = document.getElementById("letter-two");
 var letter3 = document.getElementById("letter-three");
@@ -17,14 +18,14 @@ var letter5 = document.getElementById("letter-five");
 var letter6 = document.getElementById("letter-six");
 var letter7 = document.getElementById("letter-seven");
 
-// Sets a  word for first game
+// Sets band info for different games
 var bands = {
     hendrix : {name:'hendrix', solution:['h','e','n','d','r','i','x']},
     santana : {name:'santana', solution:['s','a','n','t']},
     beatles : {name:'beatles', solution:['b','e','a','t','l','s']},
 }
 
-// Sets variables to use in gameSelection function later
+// Sets variables to use in gameSelection function calls
 var jimi = bands.hendrix;
 var carlos = bands.santana;
 var fabFour = bands.beatles;
@@ -32,45 +33,31 @@ var fabFour = bands.beatles;
 // Alphabet array used to compare user input
 var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
-// Sets initial score to 0
+// Sets initial score
 var wins = 1;
+// Displays wins on page for use to see
 userWins.textContent = wins;
-// Sets word value on screen from array words
 
-console.log(bands.name);
 // Sets empty arrays for use later
 var guessedLetters = [];
 var currentBandGuess = [];
-var bandCheckArray = []
     
-
 function gameSelection(band) {
     console.log(band.name);
     // Sets available guesses to string length
     var guessCount = band.name.length + 3;
     // Displays intial guesses remaining
     guessRemain.textContent = guessCount;
-
-    // currentWord.textContent = band.name.split("");
-    
-    // for(i = 0; i < band.solution.length; i++ ) {
-    //     currentBandGuess.push("_");
-    //     currentWord.textContent = currentBandGuess;
-    // }
-
+    // Once a key is pressed, this function runs
     document.onkeyup = function(event) {
         // Sets variable userInput  equall to key released
         var userInput = event.key;
         // Makes all inputs lowercase
         userInput = userInput.toLowerCase();    
-
-        
-            
         // Tests to make sure input is a letter
         if (letters.includes(userInput)){
             // Alerts in the console which key was pressed
             console.log(userInput + " was pressed!")
-           
             // Checks if the user input is already in guessedLettesr array and if not, appends it.
             if(!guessedLetters.includes(userInput)) {
                 guessedLetters.push(userInput);
@@ -85,40 +72,39 @@ function gameSelection(band) {
                     }
                 }
             } 
-
-            
-            // Checks if input is a correct guess and if so, adds it to currentBandGuess array to compare later to full solution. If the correct guess has already been guessed, than nothing is appended to currentBrandGuess
-            for(i = 0; i < band.solution.length; i ++) {
-                if (userInput === band.solution[i] && !currentBandGuess.includes(band.solution[i])) {
-                    currentBandGuess.push(band.solution[i]);                    
+            // Checks if input is a correct guess and if so, adds it to currentBandGuess array to compare later to full solution. If the correct guess has already been guessed, than nothing is appended to currentBandGuess
+            for(i = 0; i < band.name.length; i ++) {
+                if (userInput === band.name[i] && !currentBandGuess.includes(band.name[i])) {
+                    currentBandGuess.push(band.name[i]);                    
                     console.log(currentBandGuess);
+                    // displays correct letters on screen when pressed
                     if (userInput === band.name[0]) {
-                        letter1.textContent = band.name[0]
-                    } else if (userInput === band.name[1]) {
-                        letter2.textContent = band.name[1]
-                    } else if (userInput === band.name[2]) {
-                        letter3.textContent = band.name[2];
-                    } else if (userInput === band.name[3]) {
-                        letter4.textContent = band.name[3];
-                    } else if (userInput === band.name[4]) {
-                        letter5.textContent = band.name[4];
-                    } else if (userInput === band.name[5]) {
-                        letter6.textContent = band.name[5];
-                    } else if (userInput === band.name[6]) {
-                        letter7.textContent = band.name[6];
-                    } else {
-                        console.log("something went wrong here!")
+                        letter1.textContent = band.name[i];
+                    }  
+                    if (userInput === band.name[1]) {
+                        letter2.textContent = band.name[i];
+                    }  
+                    if (userInput === band.name[2]) {
+                        letter3.textContent = band.name[i];
+                    }  
+                    if (userInput === band.name[3]) {
+                        letter4.textContent = band.name[i];
+                    }  
+                    if (userInput === band.name[4]) {
+                        letter5.textContent = band.name[i];
                     }
-                } else {
-                    console.log('already includes');
-                }
+                    if (userInput === band.name[5]) {
+                        letter6.textContent = band.name[i];
+                    }  
+                    if (userInput === band.name[6]) {
+                        letter7.textContent = band.name[i];
+                    } 
+                } 
             }
-            
-            // Checks if user's correct inputs equals the solution and if so, adds a win to their score
+            // Checks if user's correct inputs equals the solution and if so, adds a win to their score. Moves onto next game/page.
             if (band.solution.length === currentBandGuess.length) {
-                console.log('winning');
+                console.log('win!');
                 userWins.textContent = wins + 1;
-                guessedLetters = [];
                 var next = confirm("Great Job! Ready for round three???")
                 if (next) {
                     window.location = "prob3.html";
@@ -128,36 +114,4 @@ function gameSelection(band) {
     }
 }
 
-
 gameSelection(carlos);
-
-
-
-
-
-
-    
-
-
-
-    
-
-// Chooses a random band objcet for the game goal and sets it equall to variable word.
-// var word = words.hendrix;
-// var random = Math.floor(Math.random() * 3)
-// if(random === 0) {
-//     word = words.hendrix;
-// } else if(random === 1) {
-//     word = words.santana;
-// } else {
-//     word = words.beatles;
-// }
-
-
-
-// // Sets a new word for next game
-// function wordChoice() {
-//     var words = ['hendrix', 'santana', 'beatles'];
-//     var word = words[Math.floor(Math.random() * words.length)];
-//     console.log(word)
-// }
