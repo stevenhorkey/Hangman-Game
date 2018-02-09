@@ -101,18 +101,24 @@ function gameSelection(band) {
                     } 
                 } 
             }
+            
             // Checks if user's correct inputs equals the solution and if so, adds a win to their score. Moves onto next game/page.
             if (band.solution.length === currentBandGuess.length) {
                 console.log('win!');
                 userWins.textContent = wins + 1;
-                var next = confirm("Great Job! Ready for round two???")
-                if (next) {
-                    window.location = "prob2.html";
-                }
+                setTimeout(function(){
+                    var next = confirm("Great Job! Ready for round two???")
+                    if (next) {
+                        window.location = "prob2.html";
+                    }
+                }, 500);
+
             }
-        }
+        }  
     }
 }
+
+
 
 gameSelection(jimi);
 

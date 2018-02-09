@@ -105,12 +105,15 @@ function gameSelection(band) {
             if (band.solution.length === currentBandGuess.length) {
                 console.log('win!');
                 userWins.textContent = wins + 1;
-                var next = confirm("Great Job! You won all three games! Want to start over!!!")
-                if (next) {
-                    window.location = "index.html";
-                }
+                setTimeout(function(){
+                    var next = confirm("Great Job! You won all the games - Read to start over????")
+                    if (next) {
+                        window.location = "index.html";
+                    }
+                }, 500);
+
             }
-        }
+        }  
     }
 }
 

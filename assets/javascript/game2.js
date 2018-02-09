@@ -105,13 +105,17 @@ function gameSelection(band) {
             if (band.solution.length === currentBandGuess.length) {
                 console.log('win!');
                 userWins.textContent = wins + 1;
-                var next = confirm("Great Job! Ready for round three???")
-                if (next) {
-                    window.location = "prob3.html";
-                }
+                setTimeout(function(){
+                    var next = confirm("Great Job! Ready for round three???")
+                    if (next) {
+                        window.location = "prob3.html";
+                    }
+                }, 500);
+
             }
-        }
+        }  
     }
 }
+
 
 gameSelection(carlos);
