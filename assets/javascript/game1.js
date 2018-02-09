@@ -18,6 +18,16 @@ var letter5 = document.getElementById("letter-five");
 var letter6 = document.getElementById("letter-six");
 var letter7 = document.getElementById("letter-seven");
 
+function resetUnderscores() {
+letter1.textContent = "_";
+letter2.textContent = "_";
+letter3.textContent = "_";
+letter4.textContent = "_";
+letter5.textContent = "_";
+letter6.textContent = "_";
+letter7.textContent = "_";
+}
+
 // Sets band info for different games
 var bands = {
     hendrix : {name:'hendrix', solution:['h','e','n','d','r','i','x']},
@@ -41,6 +51,8 @@ userWins.textContent = wins;
 // Sets empty arrays for use later
 var guessedLetters = [];
 var currentBandGuess = [];
+
+
     
 function gameSelection(band) {
     console.log(band.name);
@@ -110,6 +122,8 @@ function gameSelection(band) {
                     var next = confirm("Great Job! Ready for round two???")
                     if (next) {
                         window.location = "prob2.html";
+                    
+                        
                     }
                 }, 500);
 
@@ -119,6 +133,6 @@ function gameSelection(band) {
 }
 
 
-
 gameSelection(jimi);
+
 
