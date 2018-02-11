@@ -14,7 +14,7 @@ var userGuess = document.getElementById("user-guess");
 var guessRemain = document.getElementById("guess-remain");
 
 // Sets band info for different games
-var bands = ['hendrix', 'santana','beatles','who','pinkfloyd']
+var bands = ['hendrix', 'santana','beatles','who','pinkfloyd','kingcrimson','gratefuldead','rollingstones','cream','ledzeppelin']
 
 // Alphabet array used to compare user input
 var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
