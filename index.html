@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>60's Hangman</title>
+    <title>60's Hangin' Man</title>
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">
@@ -21,7 +21,7 @@
             <div class="">
                 <div class="">
                     <a href="index.html">
-                        <img class="hangman-img" src="/Users/steven/Desktop/UA_coding_bootcamp/HW/HW3/Hangman-Game/assets/images/60shangman.png" alt="hangman picture"/>
+                        <img class="hangman-img" src="assets/images/60shangman.png" alt="hangman picture"/>
                     </a>
                 </div>
             </div>
@@ -33,17 +33,13 @@
                 <div class="col-sm-6 col-xs-12 content game-section">
                     <p>Press any key to get started!</p>
                     <br>
-                    <p>Wins: </p>
-                        <div id="user-wins"></div>
+                    <p class="col-xs-6">Wins: <span id="user-wins"></span></p>
+                        
+                    <p class="col-xs-6">Losses: <span id="user-losses"></span></p>
+                        
                     <br>                    
                     <p>Current Word: </p>
-                        <span class="current-word" id="letter-one">_</span>
-                        <span class="current-word" id="letter-two">_</span>
-                        <span class="current-word" id="letter-three">_</span>
-                        <span class="current-word" id="letter-four">_</span>
-                        <span class="current-word" id="letter-five">_</span>
-                        <span class="current-word" id="letter-six">_</span>
-                        <span class="current-word" id="letter-seven">_</span>
+                        <span id="current-word"></span>
                     <br>                    
                     <p>Letters already guessed: </p>
                         <div id="user-guess"></div>
@@ -57,10 +53,9 @@
     </div>
 
 <audio autoplay>
-    <source src="assets/audio/day-in-life-beatles.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
+    <source src="assets/audio/children-of-sun-cover.mp3" type="audio/mp3">
 </audio>
 <!-- Javascript -->
-<script src="assets/javascript/game1.js"></script>
+<script src="assets/javascript/game.js"></script>
 </body>
 </html>
