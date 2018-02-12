@@ -112,5 +112,7 @@ document.onkeyup = function(event) {
             
            
 };
-    
 
+// Starts audio track 8.5 seconds in so there isn't a wait time
+var audio = document.getElementById("audio");
+audio.currentTime = 8.5;
